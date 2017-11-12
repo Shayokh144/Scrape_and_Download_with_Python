@@ -1,5 +1,9 @@
 # Scrap_and_Download_with_Python
-###### 1. Python3 and BeautifulSoup is used here. 
-###### 2. Scrapy is also a good choice instead of BeautifulSoup.
+###### * Python3 and BeautifulSoup is used here. 
+###### * Scrapy is also a good choice instead of BeautifulSoup.
 
-### Scraping
+#### [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#)
+#### [Install BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
+
+### Before Scrap:
+
