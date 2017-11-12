@@ -1,9 +1,47 @@
 # Scrap_and_Download_with_Python
-###### * Python3 and BeautifulSoup is used here. 
-###### * Scrapy is also a good choice instead of BeautifulSoup.
+* Python3 and BeautifulSoup is used here. 
+* Scrapy is also a good choice for scraping with python.
 
 #### [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#)
 #### [Install BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
 
-### Before Scrap:
+### Aim
+* Want to scrap and collect data from a website
+* For example I choose [ESPNcricinfo](http://www.espncricinfo.com/) 
 
+### Note 
+* Before scraping any website please check if there is any API to provide data. If API exists there's no need to scrap.
+
+### Before Starting
+* Here, we scrap the page "http://www.espncricinfo.com/"
+* Before scraping we have to check the [status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) of the link. To check,
+
+```python
+from urllib.request import urlopen, Request
+
+hdr = {'User-Agent': 'Mozilla/5.0'}
+url = "http://www.espncricinfo.com/"
+req = Request(url, headers=hdr)
+response = urlopen(req)
+statusCode = response.getcode()
+print ('status code = ',statusCode)
+```
+* if the status code is 200, it means our request is successful.
+
+### Its time to Scrap
+* Now, we scrap all the headlines of the page
+
+```python
+from bs4 import BeautifulSoup
+if statusCode == 200:
+    soupObject = BeautifulSoup(response, "lxml")
+    allHeadlines = soupObject.find_all("h1") # find all the h1 tag
+    for headLines in allHeadlines:
+        try:
+            print(headLines.get_text()) # print the text inside the h1 tag
+        except:
+            print('no text found')
+
+```
+
+* For specific information first, we must have a look through the inspect element option of the browser, here we find stuff like this :
