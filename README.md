@@ -56,7 +56,7 @@ if statusCode == 200:
 ```
 ***
 
-* For specific information first, we must have a look through the inspect element option of the browser. Let, we want to scrap all the headlines from "TOP HEADLINES" section. To do this first look at the below picture 
+* For specific information first, we must have a look through the inspect element option of the browser. Let, we want to scrap all the headlines from "Top Headlines" section. To do this first look at the below picture 
 
 ![alt text][logo]
 
@@ -69,10 +69,28 @@ if statusCode == 200:
 
 ```
 * holy crap !! there are more than one "div" like that. So, its not gonna work. we have to do something more.
+* All those "div" s we found here not contains the text "Top Headlines", so this is really useful.
 
+```python
 
+    topHeadlinesDiv = soupObject.find_all("div",{"class":"headlineStack"})
+    print('number of div found = ',len(topHeadlinesDiv))
 
+    for div in topHeadlinesDiv:
+        try:
+            headTxt = div.find("h1",{"class":"module__header"}).get_text()
+            headTxt = headTxt.strip().lower() # remove unnecesary space and convert text to lower case to match easily
+            if headTxt == "top headlines":
+                topHeadlinesUl = div.find("ul",{"class":"headlineStack__list"}) # find the specific "ul" tag that contains data
+                topHeadlinesLi = topHeadlinesUl.find_all("li") # find all the "li" tag inside the "ul" tag
+                for li in topHeadlinesLi:
+                    print(li.get_text()) # print the sedired result
+        except:
+            pass
 
+```
+
+* Done ! we get our desired result. [Full Code](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlines.py)
 
 [logo]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlinesEdited.png 
 
