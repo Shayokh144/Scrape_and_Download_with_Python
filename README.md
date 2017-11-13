@@ -63,7 +63,7 @@ if statusCode == 200:
 * our target is marked red in the picture. Here we go for the "div" that contains data.
 
 ```python
-    soupObject = BeautifulSoup(response, "lxml")
+
     topHeadlinesDiv = soupObject.find_all("div",{"class":"headlineStack"})
     print('number of div found = ',len(topHeadlinesDiv))
 
