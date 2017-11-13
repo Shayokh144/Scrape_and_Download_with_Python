@@ -57,7 +57,22 @@ if statusCode == 200:
 ***
 
 * For specific information first, we must have a look through the inspect element option of the browser. Let, we want to scrap all the headlines from "TOP HEADLINES" section. To do this first look at the below picture 
+
 ![alt text][logo]
+
+* our target is marked red in the picture. Here we go for the "div" that contains data.
+
+```python
+    soupObject = BeautifulSoup(response, "lxml")
+    topHeadlinesDiv = soupObject.find_all("div",{"class":"headlineStack"})
+    print('number of div found = ',len(topHeadlinesDiv))
+
+```
+* holy crap !! there are more than one "div" like that. So, its not gonna work. we have to do something more.
+
+
+
+
 
 [logo]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlinesEdited.png 
 
