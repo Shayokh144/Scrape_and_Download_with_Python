@@ -56,4 +56,8 @@ if statusCode == 200:
 ```
 ***
 
-* For specific information first, we must have a look through the inspect element option of the browser, here we find stuff like this :
+* For specific information first, we must have a look through the inspect element option of the browser. Let, we want to scrap all the headlines from "TOP HEADLINES" section. To do this first look at the below picture 
+![alt text][logo]
+
+[logo]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlinesEdited.png 
+
