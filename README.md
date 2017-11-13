@@ -84,7 +84,7 @@ if statusCode == 200:
                 topHeadlinesUl = div.find("ul",{"class":"headlineStack__list"}) # find the specific "ul" tag that contains data
                 topHeadlinesLi = topHeadlinesUl.find_all("li") # find all the "li" tag inside the "ul" tag
                 for li in topHeadlinesLi:
-                    print(li.get_text()) # print the sedired result
+                    print(li.get_text()) # print the desired result
         except:
             pass
 
