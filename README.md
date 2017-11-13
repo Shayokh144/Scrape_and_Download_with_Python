@@ -6,8 +6,8 @@
 #### [Install BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
 
 ### Aim
-* Want to scrap and collect data from a website
-* For example I choose [ESPNcricinfo](http://www.espncricinfo.com/) 
+* To scrap and collect data from a website
+* For example [ESPNcricinfo](http://www.espncricinfo.com/) 
 
 ### Note 
 * Before scraping any website please check if there is any API to provide data. If API exists there's no need to scrap.
