@@ -32,7 +32,7 @@ print ('status code = ',statusCode)
 * if the status code is 200, it means our request is successful.
 
 ### Its time to Scrap
-* Now, we scrap all the headlines of the page
+* Now, some sample scraping code is given here
 
 ***
 ```python
@@ -90,7 +90,7 @@ if statusCode == 200:
 
 ```
 
-* Done ! we get our desired result. [Full Code](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlines.py)
+* Done ! we get our desired result. [Full Code Here](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlines.py)
 
 [logo]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlinesEdited.png 
 
