@@ -6,6 +6,7 @@
 #### [Install BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
 
 ### Aim
+#### Part 1
 * To scrap and collect data from a website
 * For example [ESPNcricinfo](http://www.espncricinfo.com/) 
 
@@ -31,6 +32,7 @@ print ('status code = ',statusCode)
 
 * if the status code is 200, it means our request is successful.
 
+## Part 1
 ### Its time to Scrap
 * Now, some sample scraping code is given here
 
@@ -71,6 +73,7 @@ if statusCode == 200:
 * holy crap !! there are more than one "div" like that. So, its not gonna work. we have to do something more.
 * All those "div" s we found here not contains the text "Top Headlines", so this is really useful.
 
+***
 ```python
 
     topHeadlinesDiv = soupObject.find_all("div",{"class":"headlineStack"})
@@ -89,6 +92,7 @@ if statusCode == 200:
             pass
 
 ```
+***
 
 * Done ! we get our desired result. [Full Code Here](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlines.py)
 
