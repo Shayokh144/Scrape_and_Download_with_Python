@@ -97,7 +97,7 @@ if statusCode == 200:
 ```
 ***
 
-* Done ! we get our desired result. [Full Code Here](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlines.py)
+* Done ! we get our desired result. [Complete Code Here](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlines.py)
 
 
 ## Part 2
@@ -113,7 +113,7 @@ the "a" tag contains link like this "/courses/mathematics/18-781-theory-of-numbe
 which is not a downloadable link.
 * If we click that link from webpage we will find the link like "https://ocw.mit.edu/courses/mathematics/18-781-theory-of-numbers-spring-2012/lecture-notes/MIT18_781S12_lec2.pdf"
 * So, the missing part is this "https://ocw.mit.edu" , that we have to add with the scraped one.
-* Done !! Now we can download easily from this links.  
+* Done !! Now we can download easily from this links.  [Complete Code Here](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/Scraping_and_Downloading.py)
 
 [TopHeadlinesEdited]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlinesEdited.png 
 [DownloadPdf]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/DownloadPdf.PNG
