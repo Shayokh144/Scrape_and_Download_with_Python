@@ -9,6 +9,9 @@
 #### Part 1
 * To scrap and collect data from a website
 * For example [ESPNcricinfo](http://www.espncricinfo.com/) 
+#### Part 2
+* To scrap and download pdf from a website
+* For example [MITOPENCOURSEWARE](https://ocw.mit.edu/index.htm) 
 
 ### Note 
 * Before scraping any website please check if there is any API to provide data. If API exists there's no need to scrap.
@@ -60,7 +63,7 @@ if statusCode == 200:
 
 * For specific information first, we must have a look through the inspect element option of the browser. Let, we want to scrap all the headlines from "Top Headlines" section. To do this first look at the below picture 
 
-![alt text][logo]
+![alt text][TopHeadlinesEdited]
 
 * our target is marked red in the picture. Here we go for the "div" that contains data.
 
@@ -96,5 +99,21 @@ if statusCode == 200:
 
 * Done ! we get our desired result. [Full Code Here](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlines.py)
 
-[logo]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlinesEdited.png 
 
+## Part 2
+### Here we go for both scraping and downloading
+* First, we visit this [page](https://ocw.mit.edu/courses/mathematics/18-781-theory-of-numbers-spring-2012/lecture-notes/)
+* There are lots of lecture notes which we want to download
+* As mentioned earlier, we must have a look through the inspect element option of the browser.
+
+![alt text][DownloadPdf]
+
+* The yellow marked area contains our desired information, but not in the exact format. Here, "href" attribute of
+the "a" tag contains link like this "/courses/mathematics/18-781-theory-of-numbers-spring-2012/lecture-notes/MIT18_781S12_lec2.pdf",
+which is not a downloadable link.
+* If we click that link from webpage we will find the link like "https://ocw.mit.edu/courses/mathematics/18-781-theory-of-numbers-spring-2012/lecture-notes/MIT18_781S12_lec2.pdf"
+* So, the missing part is this "https://ocw.mit.edu" , that we have to add with the scraped one.
+* Done !! Now we can download easily from this links.  
+
+[TopHeadlinesEdited]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlinesEdited.png 
+[DownloadPdf]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/DownloadPdf.PNG
