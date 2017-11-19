@@ -115,5 +115,11 @@ which is not a downloadable link.
 * So, the missing part is this "https://ocw.mit.edu" , that we have to add with the scraped one.
 * Done !! Now we can download easily from this links.  [Complete Code Here](https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/Scraping_and_Downloading.py)
 
+## Reading Materials
+* http://web.stanford.edu/~zlotnick/TextAsData/Web_Scraping_with_Beautiful_Soup.html
+* https://medium.freecodecamp.org/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe
+* https://www.dataquest.io/blog/web-scraping-tutorial-python/
+
 [TopHeadlinesEdited]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/TopHeadlinesEdited.png 
 [DownloadPdf]: https://github.com/Shayokh144/Scrap_and_Download_with_Python/blob/master/DownloadPdf.PNG
+
